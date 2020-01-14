@@ -18,9 +18,11 @@ export const styleButtonWidget = StyleSheet.create({
 
 export const imageStyle = StyleSheet.create({
     profileImage: {
-        borderRadius: PixelRatio.getPixelSizeForLayoutSize(100),
+        borderRadius: 1000,
         width: PixelRatio.getPixelSizeForLayoutSize(200),
-        height: PixelRatio.getPixelSizeForLayoutSize(200)
+        height: PixelRatio.getPixelSizeForLayoutSize(200),
+        resizeMode: "cover",
+        aspectRatio: 1
     }
 });
 
@@ -56,6 +58,42 @@ export const textStyle = StyleSheet.create({
     imageText: {
         fontSize: PixelRatio.getPixelSizeForLayoutSize(17),
         fontWeight: "bold",
-        fontStyle: "italic"
+        fontStyle: "italic",
+        textAlign: "center"
+    }
+});
+export const flatListStyle = StyleSheet.create({
+    flatListViewStyle: {
+        width: "95%",
+        alignSelf: "center",
+        height: PixelRatio.getPixelSizeForLayoutSize(300),
+        paddingHorizontal: PixelRatio.getPixelSizeForLayoutSize(10),
+        justifyContent: "center",
+        alignItems: "center",
+        borderStyle: "dotted",
+        borderRadius: PixelRatio.getPixelSizeForLayoutSize(10),
+        borderColor: "blue",
+        borderWidth: 2,
+        backgroundColor: "brown",
+        marginBottom: 10
+    },
+    flatListTextStyle: {
+        color: "white",
+        fontSize: PixelRatio.getPixelSizeForLayoutSize(14)
+    }
+});
+export const pickerStyle = StyleSheet.create({
+    pickerContainer: {
+        // borderStyle: "solid",
+        // borderRadius: PixelRatio.getPixelSizeForLayoutSize(10),
+        // borderColor: "blue",
+        // borderWidth: 10,
+        height: PixelRatio.getPixelSizeForLayoutSize(40),
+        width: "90%",
+        backgroundColor: "white"
+    },
+    itemStyle: {
+        fontStyle: "italic",
+        color: "yellow"
     }
 });
