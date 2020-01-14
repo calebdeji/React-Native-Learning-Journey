@@ -30,3 +30,24 @@
     FlatList :
         The FlatList component displays a scrolling list of changing, but similarly structured, data.Unlike the more generic ScrollView, the FlatList only renders elements that are currently showing on the screen, not all the elements at once.
         Requores two props : data and renderItem.
+
+# Static Keyword :
+
+    The static keyword defines a static method for a class. Static methods aren't called on instances of the class. Instead, they're called on the class itself. These are often utility functions, such as functions to create or clone objects.
+
+# Static variable :
+
+    There may be times when a static variable is needed in a Javascript function; static variables maintain their value between function calls and are tidier than using a global variable because they cannot be modified outside of the function.
+    Example :
+    function foo() {
+
+        if( typeof foo.counter == 'undefined' ) {
+            foo.counter = 0;
+        }
+        foo.counter++;
+        document.write(foo.counter+"<br />");
+    }
+    foo(); //1
+    foo(); //2
+    foo(); //3
+    foo(); //4

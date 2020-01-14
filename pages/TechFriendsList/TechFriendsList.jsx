@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import { FlatList, View, Text } from "react-native";
 import { flatListStyle } from "../../style/globalStyle";
+import { data } from "./FlastListData";
 
 export default class TechFriendsList extends Component {
     constructor(props) {
         super(props);
         this.props = props;
     }
+    static navigationOptions = {
+        title: "Friends"
+    };
     render() {
         return (
             <View>
