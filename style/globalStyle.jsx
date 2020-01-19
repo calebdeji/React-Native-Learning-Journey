@@ -1,4 +1,5 @@
-import { StyleSheet, PixelRatio } from "react-native";
+import { StyleSheet, PixelRatio, StatusBar, Platform } from "react-native";
+import DeviceInfo from "react-native-device-info";
 export const defaultStyleForView = StyleSheet.create({
     viewContainer: {
         height: PixelRatio.getPixelSizeForLayoutSize(300),
@@ -95,5 +96,26 @@ export const pickerStyle = StyleSheet.create({
     itemStyle: {
         fontStyle: "italic",
         color: "yellow"
+    }
+});
+
+export const navigationOptionStyle = {
+    headerStyle: {
+        backgroundColor: "orange",
+        paddingTop: PixelRatio.getPixelSizeForLayoutSize(30)
+    },
+    headerTintColor: "rgb(245, 222, 179)",
+    headerTitleStyle: {
+        fontWeight: "bold",
+        fontStyle: "italic"
+    }
+};
+export const safeViewStyle = StyleSheet.create({
+    androidSafeArea: {
+        paddingTop:
+            Platform.OS && DeviceInfo.hasNotch() === "android"
+                ? StatusBar.currentHeight
+                : 0,
+        backgroundColor: "burlywood"
     }
 });

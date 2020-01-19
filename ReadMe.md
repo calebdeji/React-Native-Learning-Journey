@@ -51,3 +51,6 @@
     foo(); //2
     foo(); //3
     foo(); //4
+
+# AsyncStorage
+    AsyncStorage API is asynchronous, so each of its methods returns a Promise object and in case of error, an Error object.
